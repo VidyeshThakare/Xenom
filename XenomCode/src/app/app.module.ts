@@ -20,6 +20,7 @@ import daygridPluging from '@fullcalendar/daygrid';
 
 // #fake-start#
 import { FakeAPIService } from './_fake/fake-api.service';
+import { ReportComponent } from './modules/apps/report/report.component';
 // #fake-end#
 
 function appInitializer(authService: AuthService) {
@@ -32,7 +33,7 @@ function appInitializer(authService: AuthService) {
 }
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, ReportComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
