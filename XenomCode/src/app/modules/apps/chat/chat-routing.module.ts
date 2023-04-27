@@ -4,7 +4,6 @@ import { ChatComponent } from './chat.component';
 import { DrawerChatComponent } from './drawer-chat/drawer-chat.component';
 import { GroupChatComponent } from './group-chat/group-chat.component';
 import { PrivateChatComponent } from './private-chat/private-chat.component';
-import { FullCalendarComponent } from '@fullcalendar/angular';
 import { ReportComponent } from './report/report.component';
 import { ToDoComponent } from './to-do/to-do.component';
 import { CalendarComponent } from './calendar/calendar.component';

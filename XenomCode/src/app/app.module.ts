@@ -12,15 +12,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AuthService } from './modules/auth/services/auth.service';
 import { environment } from 'src/environments/environment';
-import interactionPluging from '@fullcalendar/interaction'
-import daygridPluging from '@fullcalendar/daygrid';
-
+// import interactionPluging from '@fullcalendar/interaction'
+// import daygridPluging from '@fullcalendar/daygrid';
+import { ReportComponent } from './modules/apps/chat/report/report.component';
+import { CalendarComponent } from './modules/apps/chat/calendar/calendar.component';import { FullCalendarModule } from '@fullcalendar/angular';
 
 
 // #fake-start#
 import { FakeAPIService } from './_fake/fake-api.service';
-import { ReportComponent } from './modules/apps/chat/report/report.component';
-import { CalendarComponent } from './modules/apps/chat/calendar/calendar.component';
+
 // #fake-end#
 
 function appInitializer(authService: AuthService) {
@@ -39,6 +39,7 @@ function appInitializer(authService: AuthService) {
     BrowserAnimationsModule,
     TranslateModule.forRoot(),
     HttpClientModule,
+    FullCalendarModule,
     ClipboardModule,
      
     // #fake-start#
