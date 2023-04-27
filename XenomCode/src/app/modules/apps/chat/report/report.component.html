@@ -1,0 +1,19 @@
+<div class="card text-center">
+
+    <div class="card-body">
+      <div>
+        <h2>Report Generation</h2>
+        <br>
+        <input type="file" class="btn btn-light" (change)="onFileSelected($event)">
+      </div>
+      <br>
+      <button (click)="onUpload()" class="btn btn-secondary">Upload</button>
+      <div>
+        <br>
+        <button (click)="generateRandomNumber()" class="btn btn-dark">Generate Report Result</button>
+      </div>
+    </div>
+    <div class="card-footer text">
+        <h3 *ngIf="randomNumber !== undefined">Success Rate : {{ randomNumber }}</h3>
+    </div>
+</div>

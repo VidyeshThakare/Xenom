@@ -12,7 +12,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AuthService } from './modules/auth/services/auth.service';
 import { environment } from 'src/environments/environment';
-import { FullCalendarModule } from '@fullcalendar/angular';
 import interactionPluging from '@fullcalendar/interaction'
 import daygridPluging from '@fullcalendar/daygrid';
 
@@ -20,7 +19,8 @@ import daygridPluging from '@fullcalendar/daygrid';
 
 // #fake-start#
 import { FakeAPIService } from './_fake/fake-api.service';
-import { ReportComponent } from './modules/apps/report/report.component';
+import { ReportComponent } from './modules/apps/chat/report/report.component';
+import { CalendarComponent } from './modules/apps/chat/calendar/calendar.component';
 // #fake-end#
 
 function appInitializer(authService: AuthService) {
@@ -33,14 +33,14 @@ function appInitializer(authService: AuthService) {
 }
 
 @NgModule({
-  declarations: [AppComponent, ReportComponent],
+  declarations: [AppComponent, ReportComponent, CalendarComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     TranslateModule.forRoot(),
     HttpClientModule,
     ClipboardModule,
-    FullCalendarModule, 
+     
     // #fake-start#
     environment.isMockEnabled
       ? HttpClientInMemoryWebApiModule.forRoot(FakeAPIService, {

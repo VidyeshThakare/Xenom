@@ -4,6 +4,10 @@ import { ChatComponent } from './chat.component';
 import { DrawerChatComponent } from './drawer-chat/drawer-chat.component';
 import { GroupChatComponent } from './group-chat/group-chat.component';
 import { PrivateChatComponent } from './private-chat/private-chat.component';
+import { FullCalendarComponent } from '@fullcalendar/angular';
+import { ReportComponent } from './report/report.component';
+import { ToDoComponent } from './to-do/to-do.component';
+import { CalendarComponent } from './calendar/calendar.component';
 
 const routes: Routes = [
   {
@@ -21,6 +25,18 @@ const routes: Routes = [
       {
         path: 'drawer-chat',
         component: DrawerChatComponent,
+      },
+      {
+        path: 'calendar',
+        component: CalendarComponent,
+      },
+      {
+        path: 'report',
+        component: ReportComponent,
+      },
+      {
+        path: 'to-do',
+        component: ToDoComponent,
       },
 
       { path: '', redirectTo: 'private-chat', pathMatch: 'full' },

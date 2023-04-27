@@ -6,7 +6,7 @@ import { DocumentsComponent } from './documents/documents.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ProfileComponent } from './profile.component';
 import { ConnectionsComponent } from './connections/connections.component';
-import { ReportComponent } from '../apps/report/report.component';
+import { ReportComponent } from '../apps/chat/report/report.component';
 
 const routes: Routes = [
   {
