@@ -20,6 +20,7 @@ import { CalendarComponent } from './modules/apps/chat/calendar/calendar.compone
 
 // #fake-start#
 import { FakeAPIService } from './_fake/fake-api.service';
+import { CommonModule } from '@angular/common';
 
 // #fake-end#
 
@@ -36,6 +37,7 @@ function appInitializer(authService: AuthService) {
   declarations: [AppComponent, ReportComponent, CalendarComponent],
   imports: [
     BrowserModule,
+    CommonModule,
     BrowserAnimationsModule,
     TranslateModule.forRoot(),
     HttpClientModule,

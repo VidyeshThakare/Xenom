@@ -1,3 +1,4 @@
+import { isNgContent } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -8,6 +9,13 @@ import { Component, OnInit } from '@angular/core';
 export class ToDoComponent implements OnInit {
 
   constructor() { }
+
+  list:any[]=[];
+
+  addTask(item:string){
+    this.list.push({id:this.list.length,name:item})
+    console.warn(this.list)
+  }
 
   ngOnInit(): void {
   }
