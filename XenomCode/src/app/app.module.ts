@@ -21,6 +21,8 @@ import { CalendarComponent } from './modules/apps/chat/calendar/calendar.compone
 // #fake-start#
 import { FakeAPIService } from './_fake/fake-api.service';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { ToDoComponent } from './modules/apps/chat/to-do/to-do.component';
 
 // #fake-end#
 
@@ -34,7 +36,7 @@ function appInitializer(authService: AuthService) {
 }
 
 @NgModule({
-  declarations: [AppComponent, ReportComponent, CalendarComponent],
+  declarations: [AppComponent, ReportComponent, CalendarComponent, ToDoComponent],
   imports: [
     BrowserModule,
     CommonModule,
@@ -43,7 +45,8 @@ function appInitializer(authService: AuthService) {
     HttpClientModule,
     FullCalendarModule,
     ClipboardModule,
-     
+    FormsModule,
+
     // #fake-start#
     environment.isMockEnabled
       ? HttpClientInMemoryWebApiModule.forRoot(FakeAPIService, {
