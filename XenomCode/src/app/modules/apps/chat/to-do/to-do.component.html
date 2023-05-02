@@ -1,31 +1,19 @@
+<div class="todos">
 
-
-<div class="card cardbg">
-        <div class="input-group mb-3 card-body">
-            <span class="input-group-text btn-dark" id="basic-addon1">List New Task</span>
-            <input type="text" class="form-control" placeholder="Enter the Task" #task>
-            <button class="btn btn-outline-success tasksubmit" type="button" id="button-addon2" (click)="addTask(task.value)">Add Task</button>
-        </div>
-</div>
-<br><br>
-
-<ng-container *ngFor="let item of items">
-    <li>{{ item }}</li>
-  </ng-container>
-
-<!-- <div>
-<table class="table" *ngFor="let item of list">
-    <thead class="tablehead">
-      <tr>
-        <th scope="col"><h3>No.</h3></th>
-        <th scope="col"><h3>Tasks in Queue</h3></th>
-        <th scope="col"><h3>Actions</h3></th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>{{item.name}}</td>
-        </tr>
-    </tbody>
-</table>
-</div> -->
+    <form (submit) ="addTodo()"></form>
+      <input
+        type="'text"
+        name="inputTodo"
+        placeholder="Enter Todo..."
+        class="todo-input"
+        [(ngModel)]="inputTodo"
+        />
+  
+        <input type="submit"  (click)="addTodo()" value="Add Todo" class="todo-submit" />
+    <div *ngFor="let todo of todos; let i=index;" class="todo {{(todo.completed ? 'done' : '') }}">
+      <div class="id">{{ i }}</div>
+        <div class="content" (click)="toggleDone(i)">{{todo.content}}</div>
+        <button class="btn btn-danger remove" (click)="deleteTodo(i)">Remove</button>
+      </div>
+    </div>
+  

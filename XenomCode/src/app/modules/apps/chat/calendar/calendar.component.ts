@@ -12,5 +12,6 @@ export class CalendarComponent  {
     initialView: 'dayGridMonth',
     plugins: [dayGridPlugin]
   };
+  input1:any=""
   constructor() { }
 }
