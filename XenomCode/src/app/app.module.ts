@@ -23,6 +23,7 @@ import { FakeAPIService } from './_fake/fake-api.service';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ToDoComponent } from './modules/apps/chat/to-do/to-do.component';
+import { MeetingComponent } from './modules/apps/chat/meeting/meeting.component';
 
 // #fake-end#
 
@@ -36,7 +37,7 @@ function appInitializer(authService: AuthService) {
 }
 
 @NgModule({
-  declarations: [AppComponent, ReportComponent, CalendarComponent, ToDoComponent],
+  declarations: [AppComponent, ReportComponent, CalendarComponent, ToDoComponent, MeetingComponent],
   imports: [
     BrowserModule,
     CommonModule,

@@ -7,6 +7,7 @@ import { PrivateChatComponent } from './private-chat/private-chat.component';
 import { ReportComponent } from './report/report.component';
 import { ToDoComponent } from './to-do/to-do.component';
 import { CalendarComponent } from './calendar/calendar.component';
+import { MeetingComponent } from './meeting/meeting.component';
 
 const routes: Routes = [
   {
@@ -36,6 +37,10 @@ const routes: Routes = [
       {
         path: 'to-do',
         component: ToDoComponent,
+      },
+      {
+        path: 'meeting',
+        component: MeetingComponent,
       },
 
       { path: '', redirectTo: 'private-chat', pathMatch: 'full' },
